@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs - The Tasting Tracks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="sub-header">
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder="Search Recipes" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="menu-icon">&#9776;</div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="idx.html">HOME</a></li>
+                    <li><a href="About.html.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="user-icon" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <i class="fa-solid fa-user"></i>
+                <div class="dropdown" id="userDropdown" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                    <ul>
+                        <li><a href="profile page.html"><i class="fa-solid fa-user-circle"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <h1><u>Blogs</u></h1>
+    </section>
+
+    <section class="blog-list">
+        <div class="blog-item">
+            <img src="momos.jpeg" alt="Steamed & Stuffed: The Momo">
+            <div class="blog-info">
+                <h2>Steamed & Stuffed: The Momo</h2>
+                <p>Momos, a popular South Asian delicacy, are delightful steamed dumplings filled with a variety of ingredients ranging from vegetables to meat.</p>
+                <a href="momos.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="blog-item">
+            <img src="pizza.jpeg" alt="The Art of Making Authentic Pizza">
+            <div class="blog-info">
+                <h2>The Art of Making Authentic Pizza</h2>
+                <p>Discover the secrets behind crafting the perfect pizza from scratch, complete with homemade dough, rich sauce, and traditional toppings.</p>
+                <a href="pizza.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="blog-item">
+            <img src="pasta.jpeg" alt="Mastering the Art of Pasta">
+            <div class="blog-info">
+                <h2>Mastering the Art of Pasta</h2>
+                <p>Pasta is a beloved comfort food worldwide, and here you’ll find tips and tricks for preparing perfect pasta dishes, from traditional to modern.</p>
+                <a href="pasta.html" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog-submission">
+        <h2>Submit Your Blog</h2>
+        <form action="#" method="post" class="blog-form">
+            <div class="form-group">
+                <label for="blog-title">Blog Title:</label>
+                <input type="text" id="blog-title" name="blog-title" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="blog-author">Author Name:</label>
+                <input type="text" id="blog-author" name="blog-author" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="blog-content">Blog Content:</label>
+                <textarea id="blog-content" name="blog-content" rows="6" required></textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="blog-image">Upload Image:</label>
+                <input type="file" id="blog-image" name="blog-image" accept="image/*">
+            </div>
+    
+            <button type="submit" class="submit-btn">Submit Blog</button>
+        </form>
+    </section>
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Footer content here -->
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 TheTastingTracks. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>    
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <a href="idx.html">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            
+            <div class="menu-icon">&#9776;</div>
+    
+            <div class="nav-list">
+                <ul>
+                    <li><a href="idx.html">HOME</a></li>
+                    <li><a href="About.html.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            
+            <!-- User Icon Section -->
+            <!-- User Icon Section -->
+            <div class="user-icon" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <i class="fa-solid fa-user"></i>
+                <div class="dropdown" id="userDropdown" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                    <ul>
+                        <li><a href="signup.html"><i class="fa-solid fa-user-circle"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        </div>
+    </header>
+    
+    <div class="hero-section">
+        <div class="text-box">
+            <h1>Cook, Create, and Share.</h1>
+            <p>At <u class="highlight">TheTastingTracks</u>, we believe that cooking is more than just preparing food—it’s about 
+                connecting with others, sharing experiences, and exploring new flavors. <br> Our platform is
+                your go-to place to discover, create, and share amazing recipes from all over the world.
+            </p>
+            <a href="signup.html" class="hero-btn">Sign Up <i class="fa-regular fa-circle-right"></i></a>
+        </div>
+    </div>  
+
+    <section class="featured-recipes">
+        <h1>Featured Recipes</h1>
+        <p>From Kitchen to Table: Discover and Share Delicious Recipes!</p>
+    
+        <div class="row">
+            <!-- Recipe 1: Pasta -->
+            <div class="recipe-col">
+                <img src="pasta.jpeg" alt="Delicious Pasta">
+                <h3>Delicious Pasta</h3>
+                <p>A quick and easy pasta recipe that everyone will love.</p>
+                <a href="signup.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 2: Pizza -->
+            <div class="recipe-col">
+                <img src="pizza.jpeg" alt="Cheesy Pizza">
+                <h3>Cheesy Pizza</h3>
+                <p>A classic cheesy pizza loaded with your favorite toppings.</p>
+                <a href="signup.html" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 3: Pav Bhaji -->
+            <div class="recipe-col">
+                <img src="pavbhaji.jpeg" alt="Spicy Pav Bhaji">
+                <h3>Spicy Pav Bhaji</h3>
+                <p>A flavorful mix of vegetables served with buttery pav.</p>
+                <a href="signup.html" class="recipe-link">View Recipe</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="cta-section">
+        <div class="cta-container">
+            <h1>Ready to Cook Something Delicious?</h1>
+            <p>Join our community and explore hundreds of mouth-watering recipes shared by food lovers like you! Whether you're a beginner or a pro, there's something for everyone.</p>
+            <a href="Explorer.html" class="cta-btn">Explore Recipes</a>
+            <a href="signup.html" class="cta-btn cta-btn-secondary">Join the Community</a>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-image">
+                <img src="footerimg.jpeg" alt="Cooking Ingredients" />
+            </div>
+            <div class="footer-description">
+                <h2>Join Our Culinary Journey</h2>
+                <p>TheTastingTracks is dedicated to connecting food enthusiasts from all over the world. Our platform is designed to inspire creativity in the kitchen, enabling you to share your culinary masterpieces with others. Whether you're a novice cook or an experienced chef, our goal is to foster a community where everyone can discover new recipes, share experiences, and enjoy the art of cooking together.</p>
+                <a href="signup.html" class="cta-button">Share Your Recipe</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 TheTastingTracks. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>    
+    
+    <script src="script.js"></script>
+</body>
+</html>

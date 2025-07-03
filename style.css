@@ -1,0 +1,1815 @@
+/* Global styles */
+* {
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+.navbar {
+    height: 60px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted for space between logo and other elements */
+    padding: 0 20px;
+}
+
+.nav-logo {
+    height: 50px;
+    width: 100px;
+}
+
+.logo {
+    background-image: url(logo.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.border {
+    border: 2px solid transparent;
+}
+
+.border:hover {
+    border: 1.5px solid white;
+}
+
+.nav-search {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: red;
+    width: 620px;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.search-select {
+    background-color: #f3f3f3;
+    width: 50px;
+    text-align: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: none;
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    border: none;
+}
+
+.search-icon {
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    background-color: rgb(185, 9, 9);
+    color: white;
+    cursor: pointer;
+}
+
+.nav-list ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list ul li {
+    display: inline-block;
+    padding: 8px 12px;
+}
+
+.nav-list ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+}
+
+.nav-list ul li:hover::after{
+    width: 100%;
+    transition: 0.5s;
+}
+
+.nav-list ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.menu-icon {
+    font-size: 15px;
+    padding: 20px;
+    text-align: right;
+    cursor: pointer;
+    display: none; /* Hide by default on larger screens */
+}
+
+.text-box {
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: black;
+}
+
+.highlight {
+    color: red;
+}
+
+.hero-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    padding: 12px 24px;
+    font-size: 18px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+
+.hero-btn i {
+    margin-left: 5px; /* Space between text and icon */
+    font-size: 20px; /* Adjust the icon size */
+}
+
+.hero-btn:hover {
+    border: 1px solid rgb(212, 27, 27);
+    background: rgb(212, 27, 27);
+    transition: 1s;
+}
+
+/* Media Queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .nav-list ul {
+        display: none; /* Hide menu items initially */
+        flex-direction: column; /* Stack the items vertically */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: black;
+        width: 100%;
+        text-align: left;
+    }
+
+    .nav-list ul.active {
+        display: flex; /* Show the menu when active */
+    }
+
+    .nav-list ul li {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    .menu-icon {
+        display: block; /* Show the hamburger icon on smaller screens */
+    }
+
+    .text-box h1 {
+        font-size: 20px;
+    }
+
+    .row{
+        flex-direction: column;
+    }
+}
+
+.hero-section {
+    background-image: url(hero.jpeg);
+    height: 100%;
+}
+
+
+/* Featured Recipes Section */
+/* Featured Recipes Section */
+.featured-recipes {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.featured-recipes h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.featured-recipes p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* Flexbox layout for recipe columns */
+.row {
+    display: flex;
+    justify-content: space-between; /* Space between each column */
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+}
+
+.recipe-col {
+    flex: 1; /* Make each column take equal width */
+    max-width: 30%; /* Set max width to 30% of the row */
+    margin: 10px; /* Add margin between the columns */
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure that the image doesn't overflow */
+}
+
+/* Image styles */
+.recipe-col img {
+    width: 100%; /* Take full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Add rounded corners to the image */
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for image */
+.recipe-col:hover img {
+    transform: scale(1.1); /* Slightly enlarge the image on hover */
+}
+
+/* Heading styles */
+.recipe-col h3 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+
+/* Paragraph styles */
+.recipe-col p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Recipe link styles */
+.recipe-link {
+    text-decoration: none;
+    font-size: 1rem;
+    color: white;
+    background-color: #f44336;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.recipe-link:hover {
+    background-color: #d32f2f;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .recipe-col {
+        max-width: 100%; /* Full width on small screens */
+        margin-bottom: 20px;
+    }
+}
+
+.hero-section {
+    background-image: url(hero.jpeg);
+    height: 100vh;
+}
+
+
+/* Testimonials Section */
+.testimonials {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.testimonials h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.testimonials p {
+    font-size: 1.2rem;
+    color: #080707;
+    margin-bottom: 40px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonial-col {
+    flex: 1;
+    max-width: 30%; /* Ensures all columns take equal width */
+    margin: 10px;
+    padding: 20px;
+    background-color: lightpink;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.testimonial-col img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    object-fit: cover; /* Ensures image fits the circle perfectly */
+}
+
+.testimonial-col div {
+    flex-grow: 1;
+}
+
+.testimonial-col p {
+    font-size: 1rem;
+    color: #1a1414;
+    margin-bottom: 10px;
+}
+
+.testimonial-col h3 {
+    font-size: 1.2rem;
+    color: black;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .testimonial-col {
+        max-width: 100%; /* Full width on smaller screens */
+        margin-bottom: 20px;
+    }
+}
+
+.stars {
+    margin-top: 10px;
+}
+
+.stars i {
+    color: #333; /* Change star color */
+    font-size: 18px; /* Adjust the size of stars */
+    margin-right: 5px;
+}
+
+/* Comment form styling */
+/* Adding partitioned boxes for comment inputs */
+#comments-section {
+    display: flex;              /* Use Flexbox to center */
+    justify-content: center;     /* Horizontally center the form */
+    padding: 20px 0;             /* Add vertical padding */
+}
+
+.comment-form {
+    max-width: 600px;            /* Set a maximum width for the form */
+    width: 100%;                 /* Ensure the form takes up full width up to max-width */
+    padding: 30px;               /* Add padding inside the form */
+    background-color: #f9f9f9;   /* Light background for the form */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);  /* Subtle shadow for a raised effect */
+    border-radius: 8px;          /* Rounded corners */
+}
+
+.comment-form h3 {
+    text-align: center;            /* Center the heading */
+    margin-bottom: 20px;           /* Add space below the heading */
+    font-size: 1.5rem;             /* Increase font size */
+    color: #333;                   /* Change heading color */
+}
+
+.comment-box {
+    margin-bottom: 15px;         /* Space between form fields */
+}
+
+.comment-box input, 
+.comment-box textarea {
+    width: 100%;                 /* Make input and textarea take full width of the form */
+    padding: 12px;               /* Padding inside input fields */
+    border: 1px solid #ccc;      /* Border around input fields */
+    border-radius: 4px;          /* Rounded corners */
+    box-sizing: border-box;      /* Ensure padding doesn't increase width */
+}
+
+.submit-btn {
+    width: 180px;                /* Fixed width for the submit button */
+    padding: 12px;               /* Add padding for the button */
+    background-color: #4CAF50;   /* Button background color */
+    color: white;                /* Button text color */
+    border: none;                /* Remove default border */
+    border-radius: 5px;          /* Rounded corners */
+    cursor: pointer;             /* Pointer on hover */
+    display: block;              /* Ensure it stays block-level */
+    margin: 20px auto 0;              /* Center the button */
+    font-size: 1rem;
+}
+
+.comment-form .submit-btn:hover {
+    background-color: white;
+    color: #d12d2d;
+    border: 1px solid #d12d2d;
+    transition: 0.3s;
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .comment-box {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .comment-form input[type="text"],
+    .comment-form textarea {
+        padding: 10px;
+    }
+
+    .comment-form .submit-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.user-comments {
+    margin-top: 40px; /* Increase this value for more space */
+    padding: 20px;
+    background-color: #f7f7f7;
+}
+
+
+
+
+
+/* Social media icons hover effect */
+.footer .social-icons a:hover {
+    color: #d12d2d; /* Red hover effect for social media icons */
+}
+
+
+.cta-section {
+    background-color: #ffcccc; /* Slightly darker red shade */
+    color: #f44336; /* Text color */
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 900px;
+    margin: auto;
+}
+
+.cta-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: black;
+}
+
+.cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: rgb(24, 23, 23);
+}
+
+.cta-btn {
+    text-decoration: none;
+    padding: 15px 30px;
+    background-color: #ffffff; /* Button background color */
+    color: #f44336; /* Button text color */
+    border: 2px solid #f44336; /* Border color same as text color */
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease; /* Added border transition */
+}
+
+.cta-btn:hover {
+    background-color: #f44336; /* Change to text color on hover */
+    color: #ffffff; /* Change text color to white on hover */
+    border: 2px solid #ffffff; /* Change border to white on hover */
+}
+
+.cta-btn-secondary {
+    background-color: #ffebee; /* Secondary button background color */
+    color: #f44336; /* Secondary button text color */
+    border: 2px solid #f44336; /* Border color same as text color */
+}
+
+.cta-btn-secondary:hover {
+    background-color: #f44336; /* Change to text color on hover */
+    color: #ffffff; /* Change text color to white on hover */
+    border: 2px solid #ffffff; /* Change border to white on hover */
+}
+
+@media only screen and (max-width: 768px) {
+    .cta-section h1 {
+        font-size: 2rem;
+    }
+
+    .cta-section p {
+        font-size: 1rem;
+    }
+
+    .cta-btn {
+        padding: 12px 25px;
+        font-size: 0.9rem;
+    }
+}
+
+
+/* Footer Styles */
+/* Footer Styles */
+.footer {
+    background-color: #f4f4f4;
+    padding: 40px 0;
+    border-top: 5px solid #555; /* Contrast border for the footer */
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Ensures that the image and text stay side by side */
+    padding: 20px 10%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-image {
+    text-align: center;
+    flex: 1; /* Make the image container responsive */
+    margin-bottom: 20px;
+}
+
+.footer-image img {
+    width: 100%; /* Ensures the image occupies the full width of the container */
+    height: auto;
+    max-width: 400px; /* Sets a maximum size for the image */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for hover effect */
+}
+
+.footer-image img:hover {
+    transform: scale(1.1); /* Slightly increase the size on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.footer-description {
+    flex: 2; /* Make the text container larger to match the image */
+    max-width: 600px;
+}
+
+.footer-description h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.footer-description p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #d12d2d;
+    color: #fff;
+    border: 2px solid transparent;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: #d12d2d;
+    border-color: #d12d2d;
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 10%;
+    background-color: #333;
+    color: #fff;
+    flex-wrap: wrap;
+}
+
+.footer-socials h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon i {
+    font-size: 1.5rem;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.social-icon i:hover {
+    color: #d12d2d;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+    .footer-content {
+        flex-direction: column; /* Maintain row direction for mid-sized screens */
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-image {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .footer-image img {
+        max-width: 100%; /* Increase image size for smaller screens */
+    }
+
+    .footer-description {
+        text-align: center;
+        flex-basis: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column; /* Stack the content for smaller screens */
+        text-align: center;
+    }
+
+    .footer-image img {
+        width: 80%; /* Increased size for smaller screens */
+    }
+
+    .footer-description {
+        margin-left: 0;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sub-header{
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(backgrnd.jpeg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1{
+    margin-top: 200px;
+}
+
+.about-us{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col{
+    flex-basis: 48%;
+    padding: 30px;
+}
+
+.about-col img{
+    width: 100%;
+}
+
+.about-us h1, .about-us p {
+    color: black; /* Ensure text color is set to be visible */
+    visibility: visible; /* Ensure the elements are visible */
+    display: block; /* Ensure the elements are displayed */
+}
+
+.blog-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.blog-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-item:hover {
+    transform: translateY(-10px);
+}
+
+.blog-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.blog-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.blog-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.blog-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #ff5722;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more i {
+    margin-left: 5px;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.footer-socials {
+    text-align: left;
+}
+
+.footer-socials h3 {
+    margin-bottom: 10px;
+}
+
+.footer-socials .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-copy {
+    text-align: right;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .blog-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav-list ul {
+        gap: 15px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .blog-info h2 {
+        font-size: 1.3rem;
+    }
+
+    .blog-info p {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-list {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        flex-direction: column;
+    }
+
+    .nav-list ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-copy {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .blog-info h2 {
+        font-size: 1.2rem;
+    }
+
+    .blog-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Blog Submission Form Styles */
+.blog-submission {
+    background-color: #f5f5f5;
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-submission h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.blog-form .form-group {
+    margin-bottom: 20px;
+}
+
+.blog-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.blog-form input[type="text"],
+.blog-form textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+.blog-form input[type="file"] {
+    display: block;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #ff5722;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e64a19;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .blog-submission {
+        padding: 20px;
+    }
+}
+
+
+.location{
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe{
+    width: 100%;
+}
+
+.row {
+    display: flex; /* Make the row a flex container */
+    justify-content: space-between; /* Space between columns */
+}
+
+.contact-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.contact-col {
+    flex-basis: 48%;
+    padding: 30px;
+}
+
+.contact-col h1{
+    font-size: 20px;
+    color: #080707;
+}
+.contact-images {
+    flex-basis: 48%; /* Take 48% of the width */
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    gap: 20px; /* Space between images */
+}
+
+.contact-images img {
+    width: 100%; /* Make images responsive */
+    border-radius: 10px; /* Optional: Rounded corners */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 30px; /* Adds space between the icon and text */
+    transition: transform 0.3s ease; /* Add transition for hover effect */
+}
+
+.contact-col .fa {
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transition for hover */
+}
+
+.contact-col div:hover .fa {
+    color: #ff6f61; /* Change color on hover */
+    transform: scale(1.1); /* Slightly enlarge the icon on hover */
+}
+
+.contact-col div:hover {
+    transform: translateX(10px); /* Move the entire row slightly on hover */
+}
+
+.contact-col div p {
+    padding: 0;
+}
+
+.contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact-col input,
+.contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.signup-page .signup-hero {
+    height: 100vh; /* Increase the height of the background image */
+    width: 100%;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(hero.jpeg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #333;
+    position: relative;
+}
+
+.signup-page .signup-hero h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+.signup-page .signup-hero h1::after{
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Sign Up Form */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.signup-form {
+    background-color: #fff;
+    padding: 80px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+}
+.signup-form h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 50px; /* Adjust margin as needed */
+    position: relative; /* Add this line */
+}
+
+.signup-form h1::after {
+    content: '';
+    width: 30px;
+    height: 4px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: relative; /* Change to relative */
+    display: block; /* Ensure it appears as a block */
+    margin: 10px auto 0; /* Center the line and add space above */
+}
+
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.signup-form .input-box {
+    margin-bottom: 30px;
+}
+
+.signup-form .input-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.signup-form .input-box input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.signup-form .signup-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #f44336;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.signup-form .signup-btn:hover {
+    background-color: #d32f2f;
+}
+
+form p{
+    text-align: left;
+    font-size: 13px;
+}
+
+form p a{
+    text-decoration: none;
+    color: #3c00a0;
+}
+
+/* Form input container with icons */
+.input-icon {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* Styling the icon */
+.input-icon i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    font-size: 16px;
+}
+
+/* Styling the input fields */
+.input-icon input {
+    width: 100%;
+    padding: 10px 10px 10px 40px; /* Adding space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-icon input:focus {
+    outline: none;
+    border-color: #333;
+}
+
+/* Button styling */
+.signup-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.signup-btn:hover {
+    background-color: #e53935;
+}
+
+.lost-password{
+    font-size: 15px;
+    color: black;
+}
+
+.hero-section {
+    background-image: url('hero.jpeg'); /* Your background image */
+    background-size: cover; /* Cover the whole section */
+    height: 600px; /* Set height */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    position: relative; /* For absolute positioning of layers */
+}
+
+.text-box {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center; /* Center text */
+    z-index: 1; /* Place above the transparent layer */
+}
+
+h1, h4, p {
+    color: white; /* Set text color to white */
+    margin: 0 0 20px; /* Add margin for spacing */
+}
+
+/* Optional: Adjust paragraph line height for better readability */
+.text-box p {
+    font-size: 20px;
+    line-height: 1.5; /* Increase line height */
+    color: #fff;
+}
+
+
+.featured-recipes {
+    margin-top: 50px; /* Space between hero and this section */
+    background-color: #fff; /* White background for contrast */
+    text-align: center;
+    padding: 20px; /* Add padding for better spacing */
+}
+
+.featured-recipes h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px; /* Reduced margin for tighter spacing */
+    color: #333; /* Darker color for visibility */
+}
+
+.featured-recipes p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555; /* Darker text color for contrast */
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Space between rows */
+}
+
+.recipe-col {
+    flex: 1; /* Allow cards to grow equally */
+    max-width: 30%; /* Set max width to 30% */
+    margin: 0 10px; /* Add margin between cards */
+    background-color: #f9f9f9; /* Background color for recipe cards */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s; /* Smooth scaling on hover */
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center items */
+    text-align: center; /* Center text */
+}
+
+.recipe-col img {
+    width: 100%; /* Take full width of the container */
+    height: 200px; /* Set a fixed height */
+    object-fit: cover; /* Ensure image covers the area without distortion */
+}
+
+.recipe-col h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.recipe-col p {
+    padding: 0 15px;
+    flex-grow: 1; /* Allow paragraph to take up available space */
+}
+
+.recipe-link {
+    display: block;
+    padding: 10px 0;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px 0; /* Spacing from the bottom */
+}
+
+.recipe-link:hover {
+    background-color: #e64a19; /* Darker shade on hover */
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Stack cards vertically on small screens */
+    }
+    
+    .recipe-col {
+        max-width: 100%; /* Full width on small screens */
+        margin-bottom: 20px;
+    }
+}
+.footer {
+    background-color: #f8f8f8; /* Optional: Background color for the footer */
+    padding: 40px 0; /* Increased padding for more space at top and bottom */
+    margin: 0; /* Remove any margin */
+    width: 100%; /* Ensure full width */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically centered */
+    justify-content: space-between; /* Space between image and text */
+    max-width: 1200px; /* Max width for the content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Padding on the left and right */
+}
+
+.footer-image {
+    flex: 1; /* Allow the image to grow */
+    margin-right: 30px; /* Increased margin for more space between image and text */
+}
+
+.footer-image img {
+    width: 100%; /* Make image responsive */
+    max-width: 300px; /* Set a max width for the image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.footer-description {
+    flex: 2; /* Allow more space for the description */
+    text-align: left; /* Align text to the left */
+}
+
+.footer-description h2 {
+    font-size: 2rem; /* Increase font size for heading */
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.footer-description p {
+    font-size: 1.2rem; /* Increase font size for paragraph */
+    line-height: 1.5; /* Improve readability */
+    margin-top: 10px; /* Optional: Additional space above paragraph */
+}
+
+.footer-bottom {
+    margin-top: 30px; /* Space above the footer bottom */
+    text-align: center; /* Center the footer bottom text */
+}
+
+.footer-socials {
+    margin-bottom: 20px; /* Space below social links */
+}
+
+.footer-socials h3 {
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.footer-copy p {
+    font-size: 0.9rem; /* Adjust font size for copyright notice */
+}
+
+/* Optional: To remove any space around the footer on mobile devices */
+@media (max-width: 768px) {
+    .footer {
+        padding: 20px 0; /* Adjust padding for smaller screens */
+    }
+}
+
+.recipe-section {
+    position: relative; /* Set relative positioning for child elements */
+    padding: 20px; /* Add padding */
+    overflow: hidden; /* Hide overflow to contain the blurred background */
+}
+
+.recipe-section::before {
+    content: ''; /* Create a pseudo-element */
+    position: absolute; /* Position it absolutely */
+    top: 0; /* Cover from top */
+    left: 0; /* Cover from left */
+    right: 0; /* Cover from right */
+    bottom: 0; /* Cover from bottom */
+    background-image: url('hero.jpeg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    filter: blur(5px); /* Apply blur effect */
+    z-index: 0; /* Behind the content */
+}
+
+.recipe-container {
+    position: relative; /* Set position for container */
+    max-width: 800px; /* Set a maximum width for the recipe container */
+    margin: 0 auto; /* Center the container */
+    z-index: 1; /* Ensure the content is above the background */
+    background: rgba(0, 0, 0, 0.6); /* Optional: dark overlay for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Inner padding */
+    color: white; /* Set text color for better visibility */
+}
+
+.recipe-title {
+    font-size: 2.5rem; /* Title font size */
+    margin-bottom: 15px; /* Space below the title */
+}
+
+/* Styling for ingredients list */
+.ingredients-list {
+    list-style-type: disc; /* Bullet points */
+    padding-left: 20px; /* Indentation for bullets */
+    font-size: 16px; /* Adjust size */
+}
+
+/* Styling for instructions list */
+.instructions-list {
+    list-style-type: decimal; /* Numbered list */
+    padding-left: 20px; /* Indentation for numbers */
+    font-size: 16px; /* Adjust size */
+    line-height: 1.6; /* Spacing between steps */
+}
+
+
+.ingredients-list li,
+.instructions-list li {
+    margin: 10px 0; /* Add space between list items */
+    font-size: 1.1rem; /* Slightly increase font size */
+}
+
+h2 {
+    font-size: 2rem; /* Section title font size */
+    margin-top: 30px; /* Space above section titles */
+    margin-bottom: 15px; /* Space below section titles */
+}
+
+.submit-btn {
+    width: 150px; /* Set a fixed width */
+    padding: 10px; /* Add padding for better appearance */
+    background-color: #4CAF50; /* Background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Optional: Add hover effect */
+.submit-btn:hover {
+    background-color: #45a049; /* Darker shade on hover */
+}
+
+.user-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 15px; /* Space between menu and user icon */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Needed for dropdown positioning */
+}
+
+.user-icon .fa-user {
+    font-size: 24px; /* Adjust icon size */
+}
+
+.dropdown {
+    display: none; /* Hidden by default */
+    position: absolute; /* Position it relative to user icon */
+    top: 100%; /* Position below the icon */
+    right: 0; /* Align to the right */
+    background-color: white; /* Background color for dropdown */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+    border-radius: 4px;
+    z-index: 1; /* Make sure dropdown appears on top */
+}
+
+.dropdown ul {
+    list-style-type: none;
+    padding: 10px 0;
+    margin: 0;
+}
+
+.dropdown ul li {
+    padding: 10px 20px; /* Spacing inside dropdown */
+}
+
+.dropdown ul li a {
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+}
+
+.user-icon .dropdown ul li:hover {
+    background-color: #f0f0f0; /* Highlight on hover */
+}
+
+.dropdown ul li a {
+    display: flex; /* Make the link a flex container */
+    align-items: center; /* Center the items vertically */
+    text-decoration: none; /* Remove underline */
+    color: black; /* Text color */
+}
+
+.dropdown ul li a i {
+    margin-right: 10px; /* Space between icon and text */
+}
+
+
+
+.background-image {
+    background-image: url('hero.jpeg'); /* Update with your image path */
+    background-size: cover; /* Make the image cover the entire screen */
+    background-position: center; /* Center the image */
+    position: fixed; /* Fixed positioning for the background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(8px); /* Blur effect */
+    z-index: -1; /* Place it behind other elements */
+}
+
+
+.profile-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.profile-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center elements */
+    margin-bottom: 20px;
+}
+
+.profile-image img {
+    width: 180px; /* Increased size */
+    height: 180px; /* Increased size */
+    border-radius: 50%;
+    border: 2px solid #ccc;
+}
+
+.profile-info {
+    text-align: center; /* Center text */
+}
+
+.profile-info h1 {
+    margin: 10px 0;
+    color: black;
+}
+
+.profile-info p{
+    color: #080707;
+}
+
+.bio-section {
+    margin: 10px 0; /* Add spacing around bio */
+}
+
+#bio {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.edit-profile-btn,
+.share-profile-btn {
+    background: #f44336; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* No border */
+    padding: 15px 25px; /* Increase padding for larger button */
+    font-size: 16px; /* Increase font size for better visibility */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 5px; /* Rounded corners */
+    margin: 5px; /* Margin between buttons */
+}
+
+
+.edit-profile-btn:hover,
+.share-profile-btn:hover {
+    background: #d32f2f; /* Darker shade on hover */
+}
+
+.separator {
+    border: 0;
+    height: 1px;
+    background: #0a0a0a; /* Separator color */
+    margin: 20px 0; /* Spacing above and below the separator */
+}
+
+.my-recipes {
+    padding: 20px;
+    background-color: white; /* White background for contrast */
+}
+
+.my-recipes h1 {
+    font-size: 50px;
+    text-align: left; /* Center the heading */
+    color: #080707;
+}
+
+.my-recipes p {
+    font-size: 20px;
+    text-align: left; /* Center the paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
+    color: #080707;
+}
+
+.row {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Space between columns */
+}
+
+.recipe-col {
+    flex: 1 1 calc(33.333% - 20px); /* Three columns with space between */
+    margin: 10px; /* Margin around each recipe column */
+    background-color: #f8f8f8; /* Light gray background */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    transition: transform 0.3s ease; /* Animation effect on hover */
+}
+
+.recipe-col:hover {
+    transform: scale(1.05); /* Scale effect on hover */
+}
+
+.recipe-col img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.recipe-col h3 {
+    margin: 10px 0; /* Space above and below the heading */
+    text-align: center; /* Center the heading text */
+}
+
+.recipe-col p {
+    padding: 0 10px 10px; /* Padding for description */
+    text-align: center; /* Center the paragraph text */
+}
+
+.recipe-link {
+    display: block; /* Block display for link */
+    text-align: center; /* Center the link */
+    padding: 10px 0; /* Padding around the link */
+    background-color: #f44336; /* Blue background */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for button */
+    margin: 10px; /* Margin around button */
+}
+
+.recipe-link:hover {
+    color: #f44336;
+    background-color: white; /* Darker blue on hover */
+    border: 1px solid black;
+}
+
+.share-recipe-page {
+    background-color: #f5f5f5;
+  }
+  
+  /* Header Styles (assuming it's empty in your code) */
+  header {
+    background-color: #fff;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Section Styles */
+  .share-recipe-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Set minimum height for full viewport */
+  }
+  
+  .share-recipe-form {
+    width: 600px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .share-recipe-form h1{
+    color: #080707;
+  }
+  /* Form Styles */
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    text-align: center;
+    color: #888;
+    margin-bottom: 20px;
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],   
+  
+  input[type="file"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius:   
+   3px;
+    box-sizing: border-box;
+    resize: none; /* Disable resizing for text areas */
+  }
+  
+  input[type="file"] {
+    padding: 5px; /* Adjust padding for file input */
+  }
+  
+  textarea {
+    height: 100px; /* Set initial height for text areas */
+  }
+  
+  .submit-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Footer Styles (assuming it's empty in your code) */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+
+
+
+  .share-recipe-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('hero.jpeg'); /* Replace with your hero image path */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    margin-top: 0px;
+  }
+  
+  .share-recipe-form {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Adjust width as needed */
+    max-width: 600px;
+    text-align: left;
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Navbar Styles */
+header {
+    position: sticky; /* Stick the navbar to the top */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999; /* Ensure it's above other elements */
+    background-color: #fff;
+    padding: 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }

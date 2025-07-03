@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - The Tasting Tracks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="signup-page"> <!-- added a unique class for the sign-up page -->
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <a href="idx.html">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            
+            <div class="menu-icon">&#9776;</div>
+    
+            <div class="nav-list">
+                <ul>
+                    <li><a href="idx.html">HOME</a></li>
+                    <li><a href="About.html.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            
+    
+            <!-- User Icon Section -->
+            <!-- User Icon Section -->
+            <div class="user-icon" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <i class="fa-solid fa-user"></i>
+                <div class="dropdown" id="userDropdown" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                    <ul>
+                        <li><a href="profile page.html"><i class="fa-solid fa-user-circle"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+
+        </div>
+    </header>
+
+    <!-- Hero Section (Sign Up) -->
+<section class="signup-hero">
+    <div class="signup-form">
+        <h1 id="title">Sign Up</h1> <!-- Move the heading inside the form container -->
+        <h2>Create an Account</h2>
+        <form action="form-handler.php" method="POST">
+            <div class="input-icon">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="username" placeholder="Enter your username" required>
+            </div>
+        
+            <div class="input-icon">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <span class="input-group-text" onclick="togglePasswordVisibility()">
+                  <i class="fa-solid fa-eye" id="passwordToggleIcon"></i>
+                </span>
+              </div>
+        
+            <div class="input-icon">
+                <label>Gender:</label><br>
+                <div class="gender-options">
+                    <input type="radio" id="male" name="gender" value="Male" required>
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="Female" required>
+                    <label for="female">Female</label><br>
+                    <input type="radio" id="other" name="gender" value="Other" required>
+                    <label for="other">Other</label><br>
+                </div>
+            </div>
+        
+            <button type="submit" id="submit" class="signup-btn" name="submit"><a href="dashboard.html">Sign Up</a></button>
+            <p class="lost-password">Lost Password? <a href="password-reset.html">Click Here</a></p>
+            </form>
+        
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content"></div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 TheTastingTracks. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

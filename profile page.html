@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder="Search Recipes" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="menu-icon">&#9776;</div>
+    
+            <div class="nav-list">
+                <ul>
+                    <li><a href="idx.html">HOME</a></li>
+                    <li><a href="About.html.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+    
+            <!-- User Icon Section -->
+            <div class="user-icon" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <i class="fa-solid fa-user"></i>
+                <div class="dropdown" id="userDropdown" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-user-circle"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="background-image"></div>
+
+    <div class="profile-container">
+        <div class="profile-header">
+            <div class="profile-image">
+                <img src="profileimg.jpeg" alt="User Profile Picture">
+            </div>
+            <div class="profile-info">
+                <h1><u>SWATI YADAV</u></h1>
+                <p><strong>100</strong> Recipes | <strong>200</strong> Followers | <strong>150</strong> Following</p>
+                <div class="profile-buttons">
+                    <button class="edit-profile-btn">Edit Profile</button>
+                    <button class="share-profile-btn">Share Profile</button>
+                </div>
+            </div>
+        </div>
+
+        <hr class="separator">
+    </div>
+
+    <!-- My Recipes Section with White Background -->
+    <section class="my-recipes">
+        <h1><u>My Recipes</u></h1>
+        <p>Explore my favorite dishes and culinary creations!</p>
+    
+        <div class="row">
+            <!-- Recipe 1: Medu Vada -->
+            <div class="recipe-col">
+                <img src="Medu Vada.jpeg" alt="Medu Vada">
+                <h3>Medu Vada</h3>
+                <p>Crispy and fluffy South Indian doughnuts made from urad dal.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 2: Cheesecake -->
+            <div class="recipe-col">
+                <img src="Cheesecake.jpeg" alt="Cheesecake">
+                <h3>Cheesecake</h3>
+                <p>A rich and creamy dessert made with cream cheese and sugar.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 3: Bhindi Masala -->
+            <div class="recipe-col">
+                <img src="Bhindi.jpeg" alt="Bhindi Masala">
+                <h3>Bhindi Masala</h3>
+                <p>Spicy stir-fried okra cooked with a blend of spices.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-image">
+                <img src="footerimg.jpeg" alt="Cooking Ingredients" />
+            </div>
+            <div class="footer-description">
+                <h2>Join Our Culinary Journey</h2>
+                <p>TheTastingTracks is dedicated to connecting food enthusiasts from all over the world. Our platform is designed to inspire creativity in the kitchen, enabling you to share your culinary masterpieces with others. Whether you're a novice cook or an experienced chef, our goal is to foster a community where everyone can discover new recipes, share experiences, and enjoy the art of cooking together.</p>
+                <a href="#" class="cta-button">Share Your Recipe</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 TheTastingTracks. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>    
+    
+    <script src="script.js"></script>
+</body>
+</html>

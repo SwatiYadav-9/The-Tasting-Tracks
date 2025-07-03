@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakfast Recipes - TheTastingTracks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <a href="idx.html">
+                    <div class="logo"></div>
+                </a>
+            </div>
+            
+            <div class="menu-icon">&#9776;</div>
+    
+            <div class="nav-list">
+                <ul>
+                    <li><a href="idx.html">HOME</a></li>
+                    <li><a href="About.html.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+
+            <div class="user-icon" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <i class="fa-solid fa-user"></i>
+                <div class="dropdown" id="userDropdown" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                    <ul>
+                        <li><a href="profile page.html"><i class="fa-solid fa-user-circle"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="text-box">
+            <h1>Delicious Breakfast Recipes</h1>
+            <p>Start your day off right with our collection of tasty and easy-to-make breakfast recipes!</p>
+        </div>
+    </div>  
+
+    <section class="featured-recipes">
+        <h1>Featured Breakfast Recipes</h1>
+        <p>Quick, delicious, and healthy breakfast ideas to get your day started!</p>
+
+        <div class="row">
+            <!-- Recipe 1: Pancakes -->
+            <div class="recipe-col">
+                <img src="pancake.jpeg" alt="Fluffy Pancakes">
+                <h3>Fluffy Pancakes</h3>
+                <p>A simple and fluffy pancake recipe perfect for a weekend breakfast.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 2: Scrambled Eggs -->
+            <div class="recipe-col">
+                <img src="scrammbled eggs.jpeg" alt="Scrambled Eggs">
+                <h3>Scrambled Eggs</h3>
+                <p>Light and fluffy scrambled eggs to start your day off with protein!</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 3: French Toast -->
+            <div class="recipe-col">
+                <img src="frenchtoast.jpeg" alt="French Toast">
+                <h3>French Toast</h3>
+                <p>Sweet and savory French toast topped with your favorite fruits.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 4: Avocado Toast -->
+            <div class="recipe-col">
+                <img src="avacado toast.jpeg" alt="Avocado Toast">
+                <h3>Avocado Toast</h3>
+                <p>Healthy and creamy avocado spread on toasted bread with a sprinkle of salt.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 5: Smoothie Bowl -->
+            <div class="recipe-col">
+                <img src="smoothie bowl.jpeg" alt="Smoothie Bowl">
+                <h3>Smoothie Bowl</h3>
+                <p>Fresh, creamy smoothie topped with granola, berries, and nuts.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 6: Oatmeal -->
+            <div class="recipe-col">
+                <img src="oatmeal.jpeg" alt="Healthy Oatmeal">
+                <h3>Healthy Oatmeal</h3>
+                <p>Nutritious and warm oatmeal with your choice of toppings.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 7: Breakfast Burrito -->
+            <div class="recipe-col">
+                <img src="Breakfast Burrito.jpeg" alt="Breakfast Burrito">
+                <h3>Breakfast Burrito</h3>
+                <p>Wrapped in a tortilla with eggs, cheese, and veggies for a complete breakfast.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 8: Waffles -->
+            <div class="recipe-col">
+                <img src="waffles.jpeg" alt="Crispy Waffles">
+                <h3>Crispy Waffles</h3>
+                <p>Light and crispy waffles served with syrup and fresh fruit.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 9: Breakfast Quesadilla -->
+            <div class="recipe-col">
+                <img src="poha.jpeg" alt="Breakfast Quesadilla">
+                <h3>Breakfast Quesadilla</h3>
+                <p>A cheesy quesadilla filled with eggs, bacon, and veggies.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+
+            <!-- Recipe 10: Chia Pudding -->
+            <div class="recipe-col">
+                <img src="chia pudding.jpeg" alt="Chia Pudding">
+                <h3>Chia Pudding</h3>
+                <p>A healthy chia pudding topped with fresh fruit and nuts.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-image">
+                <img src="footerimg.jpeg" alt="Cooking Ingredients" />
+            </div>
+            <div class="footer-description">
+                <h2>Join Our Culinary Journey</h2>
+                <p>TheTastingTracks is dedicated to connecting food enthusiasts from all over the world. Our platform is designed to inspire creativity in the kitchen, enabling you to share your culinary masterpieces with others. Whether you're a novice cook or an experienced chef, our goal is to foster a community where everyone can discover new recipes, share experiences, and enjoy the art of cooking together.</p>
+                <a href="#" class="cta-button">Share Your Recipe</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 TheTastingTracks. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>    
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Pasta Recipe - The Tasting Tracks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="view-recipe-page"> <!-- Added a unique class for the view recipe page -->
+
+    <!-- Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder="Search Recipes" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="menu-icon">&#9776;</div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="idx.html">HOME</a></li>
+                    <li><a href="About.html.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="user-icon" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <i class="fa-solid fa-user"></i>
+                <div class="dropdown" id="userDropdown" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                    <ul>
+                        <li><a href="profile page.html"><i class="fa-solid fa-user-circle"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="recipe-section">
+        <div class="recipe-container">
+            <img src="palak.jpeg" alt="Palak Paneer Recipe Image" class="recipe-image">
+            <h1 class="recipe-title"><u>Palak Paneer Recipe</u></h1>
+            
+            <h2>Ingredients :</h2>
+            <ul class="ingredients-list">
+                <li>200g paneer (cubed)</li>
+                <li>2 bunches spinach (palak), cleaned and chopped</li>
+                <li>2 onions (finely chopped)</li>
+                <li>2 tomatoes (pureed)</li>
+                <li>1 tablespoon ginger-garlic paste</li>
+                <li>2 green chilies (chopped)</li>
+                <li>1 teaspoon garam masala</li>
+                <li>1 teaspoon cumin seeds</li>
+                <li>1 teaspoon turmeric powder</li>
+                <li>1 teaspoon red chili powder</li>
+                <li>1/2 cup cream</li>
+                <li>Salt to taste</li>
+                <li>2 tablespoons oil or ghee</li>
+            </ul>
+
+            <h2>Instructions :</h2>
+            <ol class="instructions-list">
+                <li>Blanch the spinach in boiling water for 2 minutes, then blend into a smooth paste.</li>
+                <li>Heat oil in a pan, add cumin seeds and let them splutter.</li>
+                <li>Add chopped onions and sauté until golden brown. Add ginger-garlic paste and green chilies, and sauté for another minute.</li>
+                <li>Add tomato puree, turmeric, red chili powder, and cook for 5 minutes.</li>
+                <li>Add the spinach puree and cook for another 5 minutes.</li>
+                <li>Add paneer cubes and garam masala, and simmer for 3-4 minutes.</li>
+                <li>Stir in cream and salt, and cook for 2 minutes.</li>
+                <li>Serve hot with naan or rice.</li>
+            </ol>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content"></div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 TheTastingTracks. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

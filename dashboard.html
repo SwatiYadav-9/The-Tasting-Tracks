@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Dashboard - The Tasting Tracks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="nav-logo border">
+                <div class="logo"></div>
+            </div>
+            <div class="nav-search">
+                <select class="search-select">
+                    <option>All</option>
+                </select>
+                <input placeholder="Search Recipes" class="search-input">
+                <div class="search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="menu-icon">&#9776;</div>
+            <div class="nav-list">
+                <ul>
+                    <li><a href="idx.html">HOME</a></li>
+                    <li><a href="About.html.html">ABOUT</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <div class="user-icon" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                <i class="fa-solid fa-user"></i>
+                <div class="dropdown" id="userDropdown" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+                    <ul>
+                        <li><a href="profile page.html"><i class="fa-solid fa-user-circle"></i>Profile</a></li>
+                        <li><a href="#"><i class="fa-solid fa-cog"></i>Settings</a></li>
+                        <li><a href="#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero-section">
+        <div class="text-box">
+            <div class="transparent-layer"></div>
+            <h1>Welcome to The Tasting Tracks!</h1>
+            <p>We're thrilled to have you here! At The Tasting Tracks, 
+                we believe that cooking is an art and a journey worth sharing. <br> 
+                Whether you’re a seasoned chef or just starting out in the kitchen, 
+                our community is dedicated to helping you explore, create, and savor
+                delicious recipes from around the world.
+                <br>
+                Join us as we celebrate the joy of cooking and the beauty of sharing 
+                meals with family and friends. Discover a treasure trove of recipes, get 
+                inspired by fellow food lovers, and share your culinary creations with others.</p>
+            <h4>Let’s embark on this flavorful journey together—happy cooking!</h4>
+        </div>
+    </div>
+
+    <section class="featured-recipes">
+        <h1>Featured Recipes</h1>
+        <p>From Kitchen to Table: Discover and Share Delicious Recipes!</p>
+    
+        <div class="row">
+            <!-- Recipe 1: Pasta -->
+            <div class="recipe-col">
+                <img src="pasta.jpeg" alt="Delicious Pasta">
+                <h3>Delicious Pasta</h3>
+                <p>A quick and easy pasta recipe that everyone will love.</p>
+                <a href="viewrecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 2: Pizza -->
+            <div class="recipe-col">
+                <img src="pizza.jpeg" alt="Cheesy Pizza">
+                <h3>Cheesy Pizza</h3>
+                <p>A classic cheesy pizza loaded with your favorite toppings.</p>
+                <a href="pizzarecipe.html" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 3: Pav Bhaji -->
+            <div class="recipe-col">
+                <img src="pavbhaji.jpeg" alt="Spicy Pav Bhaji">
+                <h3>Spicy Pav Bhaji</h3>
+                <p>A flavorful mix of vegetables served with buttery pav.</p>
+                <a href="pavbhajirecip.html" class="recipe-link">View Recipe</a>
+            </div>
+        </div>
+    
+        <div class="row">
+            <!-- Recipe 4: Chicken Tandoori -->
+            <div class="recipe-col">
+                <img src="chicken.jpeg" alt="Delicious Chicken Tandoori">
+                <h3>Chicken Tandoori</h3>
+                <p>A spicy and flavorful grilled chicken dish.</p>
+                <a href="chicken.html" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 5: Palak Paneer -->
+            <div class="recipe-col">
+                <img src="palak.jpeg" alt="Creamy Palak Paneer">
+                <h3>Palak Paneer</h3>
+                <p>A classic Indian dish made with spinach and paneer.</p>
+                <a href="palakpaneer.html" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 6: Gulab Jamun -->
+            <div class="recipe-col">
+                <img src="gulab jamun.jpeg" alt="Sweet Gulab Jamun">
+                <h3>Gulab Jamun</h3>
+                <p>Soft and sweet dessert made from milk solids.</p>
+                <a href="gulabjamun.html" class="recipe-link">View Recipe</a>
+            </div>
+        </div>
+    
+        <div class="row">
+            <!-- Recipe 7: Samosa -->
+            <div class="recipe-col">
+                <img src="samosa.jpeg" alt="Crispy Samosa">
+                <h3>Crispy Samosa</h3>
+                <p>Spicy potato-filled pastry, perfect for snacking.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 8: Hotdog -->
+            <div class="recipe-col">
+                <img src="hotdog.jpeg" alt="Classic Hotdog">
+                <h3>Classic Hotdog</h3>
+                <p>A delicious hotdog topped with mustard and ketchup.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+    
+            <!-- Recipe 9: Rajma -->
+            <div class="recipe-col">
+                <img src="rajma.jpeg" alt="Hearty Rajma">
+                <h3>Hearty Rajma</h3>
+                <p>A comforting dish made with kidney beans in a spiced gravy.</p>
+                <a href="#" class="recipe-link">View Recipe</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="testimonials">
+        <h1>What Our Users Say</h1>
+        <p>Our community loves cooking, and here’s what they have to say!</p>
+    
+        <div class="row">
+            <!-- First Testimonial -->
+            <div class="testimonial-col">
+                <img src="user1.jpeg" alt="User 1">
+                <div>
+                    <p>"The recipes are easy to follow, and I’ve made some of the best pasta ever!"</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i> <!-- Half star -->
+                    </div>
+                    <h3>John Doe</h3>
+                </div>
+            </div>
+    
+            <!-- Second Testimonial -->
+            <div class="testimonial-col">
+                <img src="user2.jpeg" alt="User 2">
+                <div>
+                    <p>"I love the variety! From classic pizzas to new flavors, everything tastes amazing."</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i> <!-- 5 stars -->
+                    </div>
+                    <h3>July Smith</h3>
+                </div>
+            </div>
+    
+            <!-- Third Testimonial -->
+            <div class="testimonial-col">
+                <img src="user3.jpeg" alt="User 3">
+                <div>
+                    <p>"Cooking has never been so fun and easy! The pav bhaji recipe is my new favorite."</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-alt"></i> <!-- 4.5 stars -->
+                    </div>
+                    <h3>Emily White</h3>
+                </div>
+            </div>
+        </div>
+    <div class="user-comments"></div>
+        <div id="comments-section">
+            <!-- Placeholder for dynamically added comments -->
+        <form class="comment-form">
+            <div class="comment-box">
+                <h3>Leave a Comment : </h3>
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name">
+            </div>
+            
+            <div class="comment-box">
+                <label for="email">Your Email</label>
+                <input type="text" id="email" name="email" placeholder="Enter your email">
+            </div>
+            
+            <div class="comment-box">
+                <label for="comment">Your Comment</label>
+                <textarea id="comment" name="comment" rows="4" placeholder="Write your comment here"></textarea>
+            </div>
+
+            <input type="submit" value="Submit" class="submit-btn">
+        </form>
+    </div>
+        </div>
+    </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-image">
+                <img src="footerimg.jpeg" alt="Cooking Ingredients" />
+            </div>
+            <div class="footer-description">
+                <h2>Join Our Culinary Journey</h2>
+                <p>TheTastingTracks is dedicated to connecting food enthusiasts from all over the world. Our platform is designed to inspire creativity in the kitchen, enabling you to share your culinary masterpieces with others. Whether you're a novice cook or an experienced chef, our goal is to foster a community where everyone can discover new recipes, share experiences, and enjoy the art of cooking together.</p>
+                <a href="#" class="cta-button">Share Your Recipe</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-socials">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2024 TheTastingTracks. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>    
+    
+    <script src="script.js"></script>
+</body>
+</html>
